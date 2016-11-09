@@ -4,6 +4,7 @@ $(document).ready(function(){
   getBios();
 
   function getBios(){
+
   $.ajax({
     type: 'GET',
     url: '/bios',
