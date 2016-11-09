@@ -4,17 +4,17 @@ var router = express.Router();
 var brian = {
   name: 'Brian Matney',
   biography: "Brian's bio",
-  imgURL: "../public/assets/images/pic1.jpg"
+  imgURL: "http://www.fillmurray.com/400/400"
 }
 var alex = {
   name: 'Alex Hermundson',
   biography: "Alex's bio",
-  imgURL: "../public/assets/images/pic2.jpg"
+  imgURL: "http://www.fillmurray.com/400/400"
 }
 var steve = {
   name: 'Steve Larsen',
   biography: "Steve's bio",
-  imgURL: "../public/assets/images/pic3.jpg"
+  imgURL: "http://www.fillmurray.com/400/400"
 }
 
 var bios = [brian, alex, steve]
