@@ -3,7 +3,12 @@ var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
 
+// routes
+var index = require('./routes/index');
+
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.use('/', index);
 
 app.set('port', process.env.PORT || 3000);
 
