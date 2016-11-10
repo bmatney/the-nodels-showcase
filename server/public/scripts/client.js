@@ -21,10 +21,11 @@ $(document).ready(function() {
             url: '/bios',
             success: function(bios) {
                 console.log("update likes");
-                // updateLikes(bios);
+                updateLikes(bios);
             }
         });
     }
+
 
 
     $(".container").on('click', 'button', function() {
@@ -36,6 +37,7 @@ $(document).ready(function() {
             success: function(data) {
                 console.log(data);
                 getLikes();
+
             }
         })
     });
@@ -49,4 +51,12 @@ $(document).ready(function() {
             $('.row:last').append('<div class="col-md-4"><img src="' + bios[i].imgURL + '" /><br><button id="' + bios[i].firstName + '">Like | <span class="' + bios[i].firstName + '">0</span></button></div>');
         }
     }
+
+
+    function updateLikes(bios) {
+      for (var i = 0; i < bios.length; i++) {
+        $('.' + bios[i].firstName).text(bios[i].likeCount);
+      }
+    }
+
 });
