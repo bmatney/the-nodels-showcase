@@ -12,6 +12,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 // routes
 app.use('/bios', bios);
 
+app.use('/likes', bios);
+
+
+
 
 // static files
 app.use('/', index);

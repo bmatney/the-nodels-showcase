@@ -16,13 +16,25 @@ $(document).ready(function(){
   });
   }
 
+  $(".container").on('click', 'button', function(){
+    var namePath = '/likes/' + $(this).attr('id');
+    console.log(namePath);
+    $.ajax({
+      type: 'POST',
+      url: namePath,
+      success: function(data){
+        console.log(data);
+      }
+    })
+  });
+
   function appendBio(bios) {
     for (var i = 0; i < bios.length; i++) {
       $('.row').append('<div class="col-md-4"><h2>' + bios[i].name + '</h2><p>' + bios[i].biography + '</p></div>');
     }
     $('.container').append('<div class="row"></div>')
     for (var i = 0; i < bios.length; i++)  {
-      $('.row:last').append('<div class="col-md-4"><img src="' + bios[i].imgURL + '" /><br><button id="' + i + '">Like | <span id="likes">0</span></button></div>');
+      $('.row:last').append('<div class="col-md-4"><img src="' + bios[i].imgURL + '" /><br><button id="' + bios[i].firstName + '">Like | <span class="' + bios[i].firstName + '">0</span></button></div>');
     }
   }
 });
