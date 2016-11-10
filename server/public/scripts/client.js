@@ -6,6 +6,7 @@ $(document).ready(function() {
     // Click event that updates like Counter
         $(".container").on('click', 'button', function() {
             var namePath = '/likes/' + $(this).attr('id');
+            //example: namePath = /likes/steve
             $.ajax({
                 type: 'POST',
                 url: namePath,
@@ -18,7 +19,7 @@ $(document).ready(function() {
             })
         });
 
-        
+
 // Get bios and on success build bios on DOM
     function getBios() {
         $.ajax({

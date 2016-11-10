@@ -33,23 +33,17 @@ router.get('/', function(req, res) {
 });
 
 router.post('/brian', function(req, res) {
-    console.log("incrementing brian likes");
     brian.likeCount++;
-    console.log(brian.likeCount);
     res.sendStatus(201);
 })
 
 router.post('/alex', function(req, res) {
-    console.log("incrementing alex likes");
     alex.likeCount++;
-    console.log(alex.likeCount);
     res.sendStatus(201);
 })
 
 router.post('/steve', function(req, res) {
-    console.log("incrementing steve likes");
     steve.likeCount++;
-    console.log(steve.likeCount);
     res.sendStatus(201);
 })
 
