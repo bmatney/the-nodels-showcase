@@ -52,7 +52,7 @@ $(document).ready(function() {
         }
         $('.container').append('<div class="row"></div>')
         for (var i = 0; i < bios.length; i++) {
-            $('.row:last').append('<div class="col-md-4"><img src="' + bios[i].imgURL + '" /><br><button id="' + bios[i].firstName + '">Like | <span class="' + bios[i].firstName + '">0</span></button></div>');
+            $('.row:last').append('<div class="col-md-4"><img src="' + bios[i].imgURL + '" /><br><button id="' + bios[i].firstName + '">Like | <span class="' + bios[i].firstName + '">' + bios[i].likeCount + '</span></button></div>');
         }
     }
 
