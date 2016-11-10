@@ -7,23 +7,19 @@ var path = require('path');
 var index = require('./routes/index');
 var bios = require('./routes/bios');
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 // routes
 app.use('/bios', bios);
-
 app.use('/likes', bios);
-
-
-
 
 // static files
 app.use('/', index);
 
-
 // Set port to listen to
 app.set('port', process.env.PORT || 3000);
-
-app.listen(app.get('port'), function(){
-  console.log("Server is listening on port: " + app.get('port'));
+app.listen(app.get('port'), function() {
+    console.log("Server is listening on port: " + app.get('port'));
 });
