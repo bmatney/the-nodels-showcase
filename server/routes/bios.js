@@ -5,7 +5,7 @@ var router = express.Router();
 var brian = {
     name: 'Brian Matney',
     firstName: "brian",
-    biography: "Hailing from Gravette, Ar, a passionate saxophone player and recent resident of Minnesota. ",
+    biography: "Hailing from Gravette, Ar, Brian is a passionate saxophone player and recent resident of Minnesota. ",
     imgURL: "../assets/images/brian.png",
     likeCount: 0
 }
@@ -19,7 +19,7 @@ var alex = {
 var steve = {
     name: 'Steve Larsen',
     firstName: "steve",
-    biography: "Born and raised in Sheboygan, WI, steve makes his home in Minnesota. He loves travel, film, cooking, and his family.",
+    biography: "Born and raised in Sheboygan, WI, Steve makes his home in Minnesota. He loves travel, film, cooking, and his family.",
     imgURL: "../assets/images/steve.jpg",
     likeCount: 0
 }
